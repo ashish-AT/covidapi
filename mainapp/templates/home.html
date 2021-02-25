@@ -64,16 +64,18 @@
 								</thead>
 								<tbody>
                                     {% for item  in response.Countries  %}
-                                        <tr class="row100 body hover">
-                                            <td class="cell100 column2">{{item.CountryCode}}</td>
-                                            <td class="cell100 column2">{{item.NewConfirmed}}</td>
-                                            <td class="cell100 column2">{{item.TotalConfirmed}}</td>
-                                            <td class="cell100 column2">{{item.NewDeaths}}</td>
-                                            <td class="cell100 column2">{{item.TotalDeaths}}</td>
-                                            <td class="cell100 column2">{{item.NewRecovered}}</td>
-                                            <td class="cell100 column2">{{item.TotalRecovered}}</td>
-                                            <td class="cell100 column2">{{item.Date}}</td>
-                                        </tr>
+										<a href="https://api.covid19api.com/summary">
+											<tr class="row100 body hover">
+												<td class="cell100 column2"><a href="https://api.covid19api.com/summary">{{item.CountryCode}}</a></td>
+												<td class="cell100 column2">{{item.NewConfirmed}}</td>
+												<td class="cell100 column2">{{item.TotalConfirmed}}</td>
+												<td class="cell100 column2">{{item.NewDeaths}}</td>
+												<td class="cell100 column2">{{item.TotalDeaths}}</td>
+												<td class="cell100 column2">{{item.NewRecovered}}</td>
+												<td class="cell100 column2">{{item.TotalRecovered}}</td>
+												<td class="cell100 column2">{{item.Date}}</td>
+											</tr>
+										</a>
                                     {% endfor %}
 								</tbody>
 							</table>
